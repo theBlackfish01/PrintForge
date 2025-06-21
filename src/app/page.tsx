@@ -1,7 +1,6 @@
-/**
- * Challenge: Create the About page. This page will be
- * accessible at the `/about` route. (e.g. printforge.com/about)
- */
+import Image from "next/image";
+import Link from "next/link";
+import HomeImage from "@/public/home-image.png";
 
 export default function Home() {
   return (
@@ -20,16 +19,26 @@ export default function Home() {
             </p>
 
             <div className="flex gap-4">
-              <a
-                  href="/3d-models"
-                  className="px-6 py-3 text-black transition duration-100 bg-white border-2 border-black hover:bg-black hover:text-white"
+              <Link
+                  href="/models"
+                  className="px-6 py-3 bg-white text-black border-2 border-black transition duration-100 hover:bg-black hover:text-white"
               >
                 Browse Models
-              </a>
+              </Link>
             </div>
           </div>
-          <img src="/home-image.png" width={350} />
+
+          <div className="flex-1">
+            <Image
+                src={HomeImage}
+                alt="3D printing models preview"
+                width={HomeImage.width}
+                height={HomeImage.height}
+                className="w-[550px] h-auto rounded-lg"
+                priority
+            />
+          </div>
         </section>
       </main>
-  )
+  );
 }

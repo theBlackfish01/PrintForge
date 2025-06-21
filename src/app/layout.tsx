@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import NavBar from "@/app/NavBar";
+import NavBar from "./Components/NavBar";
 import { Albert_Sans, Montserrat_Alternates } from "next/font/google"
+import Footer from "@/src/app/Components/Footer";
 
 const albertSans = Albert_Sans({
   subsets: ["latin"],
@@ -35,7 +36,7 @@ export default function RootLayout({
       >
         <NavBar/>
         {children}
-        <footer>Footer</footer>
+        <Footer/>
       </body>
     </html>
   );
