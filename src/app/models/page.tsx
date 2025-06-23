@@ -1,4 +1,3 @@
-import Link from "next/link"
 import { getAllModels } from "../lib/models"
 import type { Model } from "../types"
 import ModelCard from "../Components/ModelCard"
